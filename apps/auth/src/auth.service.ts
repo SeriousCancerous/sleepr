@@ -28,6 +28,4 @@ export class AuthService {
       expires
     });
   }
-
-  
 }
