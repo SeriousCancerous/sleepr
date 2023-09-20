@@ -11,7 +11,6 @@ export class AuthService {
     private readonly configService: ConfigService,
     private readonly jwtService: JwtService,
     ){
-
     }
   async login(user: UserDocument, response: Response){
     const tokenPayload : TokenPayload = {

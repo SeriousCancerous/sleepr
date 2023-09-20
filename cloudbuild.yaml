@@ -1,52 +1,69 @@
 steps:
-  #Reservations
+  # Reservations
   - name: 'gcr.io/cloud-builders/docker'
-    args: [
-      'build',
-      '-t',
-      'asia-southeast1-docker.pkg.dev/sleepr-399309/reservations/production',
-      '-f',
-      'apps/reservations/Dockerfile',
-      '.'
-    ]
+    args:
+      [
+        'build',
+        '-t',
+        'asia-southeast1-docker.pkg.dev/sleepr-399309/reservations/production',
+        '-f',
+        'apps/reservations/Dockerfile',
+        '.',
+      ]
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push, 'asia-southeast1-docker.pkg.dev/sleepr-399309/reservations/production']
+    args:
+      [
+        'push',
+        'asia-southeast1-docker.pkg.dev/sleepr-399309/reservations/production',
+      ]
 
-  #Auth
+  # Auth
   - name: 'gcr.io/cloud-builders/docker'
-    args: [
-      'build',
-      '-t',
-      'asia-southeast1-docker.pkg.dev/sleepr-399309/auth/production',
-      '-f',
-      'apps/auth/Dockerfile',
-      '.'
-    ]
+    args:
+      [
+        'build',
+        '-t',
+        'asia-southeast1-docker.pkg.dev/sleepr-399309/auth/production',
+        '-f',
+        'apps/auth/Dockerfile',
+        '.',
+      ]
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push, 'asia-southeast1-docker.pkg.dev/sleepr-399309/auth/production']
+    args:
+      ['push', 'asia-southeast1-docker.pkg.dev/sleepr-399309/auth/production']
 
-  #Notifications
+  # Notifications
   - name: 'gcr.io/cloud-builders/docker'
-    args: [
-      'build',
-      '-t',
-      'asia-southeast1-docker.pkg.dev/sleepr-399309/notifications/production',
-      '-f',
-      'apps/notifications/Dockerfile',
-      '.'
-    ]
+    args:
+      [
+        'build',
+        '-t',
+        'asia-southeast1-docker.pkg.dev/sleepr-399309/notifications/production',
+        '-f',
+        'apps/notifications/Dockerfile',
+        '.',
+      ]
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push, 'asia-southeast1-docker.pkg.dev/sleepr-399309/notifications/production']
+    args:
+      [
+        'push',
+        'asia-southeast1-docker.pkg.dev/sleepr-399309/notifications/production',
+      ]
 
-  #Payments
+  # Payments
   - name: 'gcr.io/cloud-builders/docker'
-    args: [
-      'build',
-      '-t',
-      'asia-southeast1-docker.pkg.dev/sleepr-399309/payments/production',
-      '-f',
-      'apps/payments/Dockerfile',
-      '.'
-    ]
+    args:
+      [
+        'build',
+        '-t',
+        'asia-southeast1-docker.pkg.dev/sleepr-399309/payments/production',
+        '-f',
+        'apps/payments/Dockerfile',
+        '.',
+      ]
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push, 'asia-southeast1-docker.pkg.dev/sleepr-399309/payments/production']
+    args:
+      [
+        'push',
+        'asia-southeast1-docker.pkg.dev/sleepr-399309/payments/production',
+      ]
